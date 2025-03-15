@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../../assets/Gallery Pics/1.webp";
 import img2 from "../../assets/Gallery Pics/2.webp";
 import img3 from "../../assets/Gallery Pics/3.webp";
@@ -15,9 +15,7 @@ import img13 from "../../assets/Gallery Pics/13.webp";
 import img14 from "../../assets/Gallery Pics/14.webp";
 
 const images = [ img5, img6, img7, img8, img9, img10, img11, img12, img13, img14,  img3, img4,img1,img2,];
-useEffect(() => {
-  window.scrollTo(0, 0); // Scrolls to the top when the component mounts
-}, []);
+
 
 function Gallery1() {
   return (
