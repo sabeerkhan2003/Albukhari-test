@@ -10,7 +10,7 @@ function BgCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % imagePaths.length);
-    }, 5000); // Change image every 5 seconds
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
