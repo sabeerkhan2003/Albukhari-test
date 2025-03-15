@@ -10,7 +10,7 @@ import ApplyNowButton from "../Components/ui/ApplyButton";
 function Landing() {
   return (
     <>
-      <BgCarousel />
+      {/* <BgCarousel /> */}
       {/* <div className="flex justify-center pt-14"> */}
         {/* <Button name={"Online Admissions"} /> */}
       {/* </div> */}
