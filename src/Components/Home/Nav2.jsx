@@ -108,7 +108,7 @@ function Nav2({ text_color }) {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-20 md:top-0 left-0 w-full h-screen bg-[#07294D] text-white font-Roboto text-xl px-4 py-4 z-40 transform ${
+        className={`fixed top-20 md:top-0 left-0 w-full h-screen bg-gray-800 text-white font-Roboto text-[17px] px-4 py-4 z-40 transform ${
           isSidebarOpen ? "translate-y-0" : "-translate-y-full"
         } transition-transform duration-500 ease-in-out`}
       >
@@ -123,9 +123,9 @@ function Nav2({ text_color }) {
             const isActive = location.pathname === item.path || (item.subPages && item.subPages.some(sub => sub.path === location.pathname));
 
             return (
-              <li key={index} className="hover:text-red-400">
+              <li key={index} className="hover:text-red-500">
                 {item.external ? (
-                  <a href={item.path} target="_blank" rel="noopener noreferrer" className="transition-colors duration-200 hover:text-red-400">
+                  <a href={item.path} target="_blank" rel="noopener noreferrer" className="transition-colors duration-200 hover:text-red-500">
                     {item.title}
                   </a>
                 ) : item.subPages ? (
@@ -133,7 +133,7 @@ function Nav2({ text_color }) {
                     <div className="flex justify-between items-center w-full">
                       <Link
                         to={item.path}
-                        className={`transition-colors duration-200 ${isActive ? "text-red-400" : "hover:text-red-500"}`}
+                        className={`transition-colors duration-200 ${isActive ? "text-red-500" : "hover:text-red-500"}`}
                         onClick={closeSidebar}
                       >
                         {item.title}
@@ -158,7 +158,7 @@ function Nav2({ text_color }) {
                     )}
                   </>
                 ) : (
-                  <Link to={item.path} className={`transition-colors duration-200 hover:text-red-400 ${isActive ? "text-red-400" : ""}`} onClick={closeSidebar}>
+                  <Link to={item.path} className={`transition-colors duration-200 hover:text-red-400 ${isActive ? "text-red-500" : ""}`} onClick={closeSidebar}>
                     {item.title}
                   </Link>
                 )}

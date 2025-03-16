@@ -29,11 +29,11 @@ function Hero() {
           {heroContent.intro.paragraphs[0]}
         </h1>
 
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10 xl:gap-16 justify-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-10 xl:gap-16 justify-center" >
           {/* Vision */}
           <div
-            className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105"
-          >
+            className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105" 
+            data-aos="fade-right">
             <h2 className="text-3xl font-bold font-bebas tracking-wider xl:tracking-widest text-yellow-300">
               {heroContent.vision.title}
             </h2>
@@ -45,7 +45,7 @@ function Hero() {
           {/* Mission */}
           <div
             className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105"
-          >
+            data-aos="fade-left">
             <h2 className="text-3xl font-bold font-bebas tracking-wider xl:tracking-widest text-yellow-300">
               {heroContent.mission.title}
             </h2>

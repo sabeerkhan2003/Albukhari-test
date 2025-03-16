@@ -18,7 +18,7 @@ function BgCarousel() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image Slides */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full blur-[2px]">
         {imagePaths.map((img, index) => (
           <img
             key={index}
@@ -37,11 +37,11 @@ function BgCarousel() {
 
       {/* Text Content */}
       <div className="absolute inset-0 font-opensans flex flex-col items-center justify-center text-white text-center mx-4">
-        <h1 className="text-3xl flex flex-col lg:gap-3 font-bebas tracking-wider lg:text-5xl font-bold drop-shadow-xl">
+        <h1 className="text-3xl flex flex-col lg:gap-3 font-bebas tracking-wider lg:text-5xl font-bold drop-shadow-xl py-4">
           <div> Welcome to </div>
           <span className="text-white">Kilakarai Bukhari Aalim Arabic College</span>
         </h1>
-        <p className="text-3xl font-bebas tracking-wider lg:text-4xl font-bold mt-2">
+        <p className="text-3xl font-bebas tracking-wider lg:text-5xl font-bold mt-2">
           Admissions <span className="text-red-500">Open 2025</span>
         </p>
         <a

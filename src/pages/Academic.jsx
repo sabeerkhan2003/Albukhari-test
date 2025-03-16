@@ -5,6 +5,8 @@ import book3 from "../assets/Academic/book3.png";
 // import SampleFaculty from '../Components/Academic/SampleFaculty';
 import SampleAdmissions from '../Components/Academic/SampleAdmissions';
 import Programs from '../Components/Academic/Programs';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const programs = [
   {
@@ -28,8 +30,15 @@ function Academic() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, 
+      once: true, 
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
-    <div className='bg-[#EDF0F2] pt-32 md:pt-0 pb-16'>
+    <div className='bg-[#EDF0F2]  md:pt-0 pb-16' data-aos="fade-up">
       
       {/* <div className='bg-[#EDF0F2] lg:px-20  '>
         <div className='md:pt-32 lg:pt-44 px-6 py-0 '>

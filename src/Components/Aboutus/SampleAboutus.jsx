@@ -1,6 +1,8 @@
 import React from 'react';
 import main from "../../assets/hero/main.jpeg";
 // import Banner from './Banner';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const heroContent = {
     intro: {
@@ -42,7 +44,7 @@ const heroContent = {
 function About() {
     return (
         <>
-            <div className='flex mx-5 lg:mx-14 -mt-16 text-lg font-Roboto text-[#6B6B6B] md:mt-0 md:gap-10 md:text-[14px] lg:text-[16px] lg:mt-[2%] pt-10'>
+            <div className='flex mx-5 lg:mx-14 -mt-16 text-lg font-Roboto text-[#6B6B6B] md:mt-0 md:gap-10 md:text-[14px] lg:text-[16px] lg:mt-[2%] pt-10' data-aos="fade-up">
                 <div>
                     {heroContent.intro.paragraphs.map((paragraph, index) => (
                         <p key={index} className='mt-10 md:mt-0 md:leading-relaxed'>
@@ -70,7 +72,7 @@ function About() {
                 </div>
             </div>
 
-            <div className='hidden md:block lg:hidden xl:hidden md:mx-5 lg:mx-14 md:text-[14px] lg:text-[16px] md:leading-relaxed'>
+            <div className='hidden md:block lg:hidden xl:hidden md:mx-5 lg:mx-14 md:text-[14px] lg:text-[16px] md:leading-relaxed' data-aos="fade-up" >
                 <h2 className='font-semibold text-lg'>{heroContent.vision.title}</h2>
                 <p className='mt-2 lg:leading-relaxed md:leading-relaxed'>{heroContent.vision.description}</p>
 
@@ -83,7 +85,7 @@ function About() {
                 </ul>
             </div>
 
-            <div className='lg:mx-14 md:mx-5 mx-5 md:text-[14px] lg:text-[16px] md:leading-relaxed font-Roboto text-[#6B6B6B]'>
+            <div className='lg:mx-14 md:mx-5 mx-5 md:text-[14px] lg:text-[16px] md:leading-relaxed font-Roboto text-[#6B6B6B]' data-aos="fade-up">
                 <h2 className='font-semibold mt-10 text-lg md:leading-relaxed'>{heroContent.facilities.title}</h2>
                 <p className='mt-2 md:leading-relaxed'>{heroContent.facilities.description}</p>
                 <ul className='list-disc ml-5 mt-2 flex flex-col gap-2'>

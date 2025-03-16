@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import main from "../../assets/hero/main.jpeg";
 
 const heroContent = {
@@ -43,8 +43,11 @@ const heroContent = {
 };
 
 function Programs() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
-        <div className='px-5 py-28  text-lg font-Roboto text-[#6B6B6B]  bg-[#EDF0F2] pt-48 lg:px-28 '>
+        <div className='px-5 py-28  text-lg font-Roboto text-[#6B6B6B]  bg-[#EDF0F2] pt-32 lg:px-28 '>
           <div className='pb-10'>
            <h5 className='text-[#07294D] text-[18px]  font-bold font-montserrat'>Academic</h5>
           <hr className='border-[#07294D] border-2 my-2 w-10 ' />

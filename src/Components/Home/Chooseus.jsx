@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import bgImage from '../../../public/1.webp';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Chooseus() {
   const heroContent = {
@@ -23,7 +25,7 @@ function Chooseus() {
 
   return (
     <>
-    <div className="relative w-full min-h-screen text-white pt-10 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-700 my-20">
+    <div className="relative w-full min-h-screen text-white pt-10 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-700 my-20 " data-aos="fade-up">
       <div 
         className="absolute inset-0 bg-cover bg-center after:content-[''] after:absolute after:inset-0 after:bg-blue-800 after:opacity-50" 
         style={{ backgroundImage: `url(${bgImage})` }}
@@ -35,7 +37,7 @@ function Chooseus() {
             <div
               key={index}
               className="space-y-5 p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-500 ease-in-out hover:scale-105"
-            >
+              data-aos="fade-up">
               <h2 className="text-[1.5rem] font-bold font-bebas tracking-wider text-yellow-300">{item.title}</h2>
               <p className="font-bebas text-lg xl:text-xl tracking-wider">{item.description}</p>
             </div>

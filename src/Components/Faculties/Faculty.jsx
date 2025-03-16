@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img1 from "../../assets/Faculties/syed_masood_jamali.png";
 import img2 from "../../assets/Faculties/abdul_hai_nadwi.png";
 import img3 from "../../assets/Faculties/yoosuf_jamali.png";
@@ -15,8 +15,17 @@ import img13 from "../../assets/Faculties/Mr. Hamsath Khan.png";
 import img14 from "../../assets/Faculties/Mr. Dhamim Anzar.png";
 import img15 from "../../assets/Faculties/Mr. Mohamed Azarudeen2.png";
 import img16 from "../../assets/Faculties/abuthahir.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Faculty() {
+    useEffect(() => {
+        AOS.init({
+          duration: 1200, 
+          once: true, 
+          easing: "ease-in-out",
+        });
+      }, []);
     const facultyMembers = [
         { name: "Dr. Syed Masood Jamali", role: "Principal", image: img1 },
         { name: "Dr. Abdul Hai Hasani Nadwi", role: "Vice Principal", image: img2 },
@@ -37,14 +46,14 @@ function Faculty() {
     ];
     return (
         <>
-         <div className='bg-[#EDF0F2] lg:px-20 pt-14 md:pt-0'>
+         <div className='bg-[#EDF0F2] lg:px-20 pt-14 md:pt-0' data-aos="fade-up">
                 <div className='md:pt-32 lg:pt-44 px-6 py-20 '>
                     <h5 className='text-[#07294D] text-[18px] font-bold font-montserrat'>Featured Faculties</h5>
                     <hr className='border-[#07294D] border-2 my-2 w-10' />
                     <h2 className='font-bold text-[26px] lg:text-[48px] font-montserrat md:text-[26px]'>Meet Our Faculties</h2>
                 </div>
 
-                <div className="container mx-auto px-4 pb-24">
+                <div className="container mx-auto px-4 pb-24" data-aos="fade-up">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-4 md:gap-y-2">
                         {facultyMembers.map((member, index) => (
                             <div key={index} className=" overflow-hidden">
