@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Nav2 from "./Nav2";
 import ApplyNowButton from "../ui/ApplyButton";
+import BG1 from "../../assets/Bg-Img/BG1.webp";
+import BG2 from "../../assets/Bg-Img/BG2.webp";
+import BG3 from "../../assets/Bg-Img/BG1.webp";
+import BG4 from "../../assets/Bg-Img/BG2.webp";
 
-const imagePaths = ["/1.webp", "/2.webp", "/3.webp", "/4.webp"];
+const images = [BG1, BG2,BG3,BG4];
 
 function BgCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagePaths.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 2000);
 
     return () => clearInterval(interval);
@@ -18,19 +22,12 @@ function BgCarousel() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image Slides */}
-      <div className="absolute inset-0 w-full h-full blur-[2px]">
-        {imagePaths.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Slide ${index}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-            loading="eager"
-          />
-        ))}
-      </div>
+      <img
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex}`}
+        className="absolute inset-0 w-full h-full object-cover blur-[2px] transition-opacity duration-[2000ms] ease-in-out"
+        loading="eager"
+      />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-400 opacity-90 mix-blend-multiply"></div>
@@ -50,8 +47,7 @@ function BgCarousel() {
           rel="noopener noreferrer"
           className="mt-4 lg:mt-6"
         >
-     <ApplyNowButton bgColor="red-500" textColor="white" />
-
+          <ApplyNowButton bgColor="red-500" textColor="white" />
         </a>
       </div>
     </div>
