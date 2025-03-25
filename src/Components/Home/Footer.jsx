@@ -24,7 +24,7 @@ function Footer() {
             </div>
             <div data-aos="fade-up" className='text-white mx-5 lg:px-5 lg:mx-5 xl:px-0 lg:mr-16 xl:mr-52 2xl:mr-80 2xl:-mx-10 2xl:ml-16  flex flex-col md:gap-2 lg:gap-5 xl:gap-5 '>
                 <h2 className='text-[20px] md:text-2xl  mb-8 pt-8 lg:mb-0 lg:pt-0  lg:my-5 xl:my-0 2xl:text-3xl font-roboto '>Sitemap</h2>
-                <ul className='grid grid-cols-2 w-56 font-roboto  md:grid-cols-3 lg:grid-cols-2 gap-y-2 mr-20 gap-x-0 md:mr-0  lg:mt-0 text-[15px] md:text-[14px] md:pl-10 lg:pl-0 2xl:pt-4'>
+                <ul className='grid grid-cols-2 w-56 font-roboto  md:grid-cols-3 md:w-80 lg:w-56  lg:grid-cols-2 gap-y-2 mr-20 gap-x-0 md:mr-0  lg:mt-0 text-[15px] md:text-[14px] md:pl-10 lg:pl-0 2xl:pt-4'>
                     {siteMap.map((item, index) => (
                         <li className='flex h-7' key={index}>
                             <a href={item.link} className=' hover:text-[#125B9E] hover:scale-x-110 hover:pl-2 hover:transition-all duration-300 2xl:text-xl'>
