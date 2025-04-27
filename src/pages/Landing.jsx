@@ -7,16 +7,15 @@ import Chooseus from "../Components/Home/Chooseus";
 import ApplyNowButton from "../Components/ui/ApplyButton";
 import Founder from "../Components/Home/Founder";
 import Hero from "../Components/Home/Hero";
-import bgImage from '../assets/Bg-Img/BG2.webp';
+import bgImage from "../assets/Bg-Img/BG2.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Landing() {
-  
   useEffect(() => {
     AOS.init({
-      duration: 1200, 
-      once: true, 
+      duration: 1200,
+      once: true,
       easing: "ease-in-out",
     });
   }, []);
@@ -24,23 +23,25 @@ function Landing() {
     <>
       <BgCarousel />
       {/* <div className="flex justify-center pt-14"> */}
-        {/* <Button name={"Online Admissions"} /> */}
+      {/* <Button name={"Online Admissions"} /> */}
       {/* </div> */}
       <Vismis />
-    
+
       <Chooseus />
       <div className="py-5" data-aos="fade-up">
         <Gallerysample />
         <div className="flex justify-center py-10 md:pb-10">
           <Link to="/gallery">
-            <ApplyNowButton name={"View more"}  textColor="blue-500"   />
+            <ApplyNowButton
+              name={"View more"}
+              textColor="[#07294D]"
+              className="text-[#07294D] hover:text-[#07294D]"
+            />
           </Link>
         </div>
       </div>
-
     </>
   );
 }
 
 export default Landing;
-
